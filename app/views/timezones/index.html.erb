@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clock+</h1>
+
+
+  <body>
+    <div id="clockcontainer">
+    <% default=Time.now+10*60*60 %>
+    <% @timezones.each do |timezone| %>
+        <% t=Time.now+timezone.offset*60*60 %>
+        <div id="everythingcontainer">
+        <div id="timezonecontainer"><span id="name"><%=timezone.utc%></span><span id="time"><%=t.hour%>:<%if t.min < 10%>0<%=t.min%>
+        <%else%><%=t.min%>
+        <%end%>
+        </span>
+        <!--time if-->
+        <%if t.day < default.day%>
+         yesterday
+        <%elsif t.day > default.day%>
+          tomorrow
+        <%else%>
+          today
+        <%end%>
+        </div>
+        <!--mode if-->
+        <div id="mode">
+        <%if 9<=t.hour && t.hour<18%>
+          <span id="business">Business Time<span>
+        <%elsif  18<=t.hour && t.hour<20 %>
+          <span id="businessovert">Business Overtime</span>
+        <%elsif 8<=t.hour && t.hour<9%>
+          <span id="personal>Personal Time</span>
+        <%elsif 23>=t.hour && t.hour<8%>
+          <span id="sleeping">Sleeping Time</span>
+        <%end%>
+        </div>
+        </div>
+    <% end %>
+    </div>
+  </body>

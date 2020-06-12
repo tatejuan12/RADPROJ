@@ -1,0 +1,297 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+body {
+  padding-top: 60px;
+}
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.card_line {
+  display: inline-block;
+}
+.card_line_comments {
+  display: inline-block;
+}
+.card_timestamp {
+  margin: 0% 10% 0% 10%;
+}
+.card_comments {
+  margin: 0% 0% 0% 5%;
+}
+.card_justify {
+  text-align: right;
+}
+#new_post {
+  background-color: hsl(90, 100%, 30%);
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+filters {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 5fr 1.5fr;
+  background-color: hsl(0, 0%, 90%);
+}
+#cards_container {
+  margin-top: 2%;
+  background-color: hsl(0, 0%, 85%);
+  border: solid black 1px;
+
+}
+#edits {
+  float:left;
+}
+filters div {
+  padding: 1%;
+  border: solid black thin;
+}
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+section {
+  overflow: auto;
+}
+#grid {
+  width: 97%;
+  padding: 1%;
+  background-color: white;
+  margin: 0.5% 1.5% 0.5% 1.5%;
+}
+.grid_line1 {
+  img {
+    border-radius: 25%;
+    width: 3.7vw;
+  }
+}
+
+#other_container {
+  margin: 16% 0% 0% 7%;
+  border: solid black thin;
+  border-radius: 5%;
+  padding: 5% 3% 5% 3%;
+}
+#user_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left space-evenly;
+  flex-grow: 0;
+  margin: 5% 0% 9%;
+}
+.other_title {
+  border-top: solid grey medium;
+  padding-left: 10%;
+  border-left: solid hsl(0, 100%, 76%) thick;
+  font-size: 118%;
+  margin-bottom: 10%;
+}
+#user_card {
+  flex-shrink: 4%;
+}
+#user_container img {
+  border-radius: 25%;
+  width: 2.5vw;
+}
+#topic_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topic_card {
+  border: solid hsl(0, 100%, 76%) thick;
+  border-radius: 10%;
+  margin: 2%;
+  flex-shrink: 4;
+}
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+footer {
+  //margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  background-color: hsl(0, 0%, 90%);
+  margin: 3% 10% 3% 10%;
+  border-radius: 1%/100%;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  nav {
+    text-align: center;
+  }
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1pxsolid#bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0030px0;
+  }
+}
+.socials{
+  display: inline-block;
+  margin-left: 3%;
+}
+#clockcontainer {
+  margin:auto;
+  width: 70%;
+  padding: 6%;
+  background-color:hsl(0, 0%, 80%);
+  border-radius: 7%/100%;
+}
+#everythingcontainer {
+  width: 80%;
+  margin: 2.5% auto 2.5% auto;
+  border: solid hsl(0, 0%, 35%) thick;
+  border-radius: 20%/100%;
+  padding: 3% 5% 3% 5%;
+
+}
+#business {
+  color: hsl(240, 100%, 60%);
+}
+#businessovert {
+  color: hsl(285, 100%, 60%);
+}
+#personal {
+  color: hsl(105, 100%, 35%);
+}
+#sleeping {
+  color: hsl(0, 100%, 65%);
+}
+#mode {
+  text-align: right;
+  padding-right: 10%;
+}
+
+#timezonecontainer {
+  padding: 2%;
+}
+
+#name {
+  font-size: 150%;
+  
+}
+#time{
+  font-size: 120%;
+  float: right;
+  margin-right: 4%;
+  
+}
+
+.field_with_errors {
+  @extend.has-error;
+
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
